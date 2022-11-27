@@ -16,7 +16,7 @@ export default function Navbar() {
           {/* <!-- logo - start --> */}
           <Link
             href='/'
-            className='inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5'
+            className='hover:text-green-500 active:text-green-700 inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5'
             aria-label='logo'
           >
             FoodHaus
@@ -27,25 +27,25 @@ export default function Navbar() {
           <nav className='hidden lg:flex gap-12'>
             <Link
               href='#'
-              className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
+              className='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
             >
               Categories
             </Link>
             <Link
               href='#'
-              className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
+              className='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
             >
               Ingredients
             </Link>
             <Link
               href='#'
-              className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
+              className='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
             >
               Area
             </Link>
             <Link
               href='/random'
-              className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
+              className='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
             >
               Random
             </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
           <button
             onClick={handleToggle}
             type='button'
-            className='z-20 inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2'
+            className='z-20 inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-green-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
