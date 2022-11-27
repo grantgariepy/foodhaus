@@ -33,13 +33,7 @@ export default async function Random() {
                 {randomRecipe.meals[0].strMeal}
               </h1>
               <h2 className='text-gray-800 text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4'>
-                Ingredients and Measuements
-              </h2>
-              <p className='text-gray-500 sm:text-lg mb-6 md:mb-8'>
-                {randomRecipe.meals[0].strInstructions}
-              </p>
-              <h2 className='text-gray-800 text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4'>
-                Ingredients and Measuements
+                Ingredients and Measurements
               </h2>
               <ul className='text-gray-500 sm:text-lg mb-6 md:mb-8'>
                 <li>
@@ -71,6 +65,14 @@ export default async function Random() {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className='pt-5'>
+            <h2 className='text-gray-800 text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4'>
+              Instructions
+            </h2>
+            <p className='text-gray-500 sm:text-lg mb-6 md:mb-8'>
+              {randomRecipe.meals[0].strInstructions}
+            </p>
           </div>
         </div>
       </div>
