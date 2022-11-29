@@ -1,9 +1,9 @@
 export type RandomRecipe = {
-  meals: {
+  meals :{
     idMeal:number;
     strMeal: string;
     strDrinkAlternate: string;
-    strCategor: string;
+    strCategory: string;
     strArea: string
     strInstructions: string;
     strMealThumb: string;

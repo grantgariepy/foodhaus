@@ -1,9 +1,10 @@
 // import { RandomRecipe } from '../../typings';
 const mealDBAPI = process.env.MEALDB_API;
 
-export const fetchRandomRecipe = async () => {
+const fetchRandomRecipe = async () => {
   const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/random.php`);
   const randomRecipe = await res.json();
+  console.log(randomRecipe);
   return randomRecipe;
 };
 

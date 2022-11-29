@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import CategoryItem from './CategoryItem';
 
-export const fetchCategories = async () => {
-  const res = await fetch('http://localhost:3000/api/categories');
+const fetchCategories = async () => {
+  const res = await fetch('http://foodhaus.vercel.app/api/categories');
   const categories = await res.json();
   return categories;
 };
@@ -20,28 +21,12 @@ export default async function Categories() {
           {/* product - start */}
 
           {categories.categories.map((category: any, index: number) => (
-            <div key={index}>
-              {/* <Link href=>
-                </Link> */}
-              <a
-                href='#'
-                className='group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3'
-              >
-                <img
-                  src={category.strCategoryThumb}
-                  alt='category'
-                  className='w-full h-full object-cover object-center group-hover:scale-110 transition duration-200'
-                  loading='lazy'
-                />
-              </a>
-              <div>
-                {/* <Link>
-                  </Link> */}
-                <div className='flex items-end gap-2'>
-                  <span className='text-gray-800 lg:text-lg font-bold'>{category.strCategory}</span>
-                </div>
-              </div>
-            </div>
+            <CategoryItem
+              name={category.strCategory}
+              thumb={category.strCategoryThumb}
+              desc={category.strCategoryDescription}
+              index={index}
+            />
           ))}
           {/* product end */}
         </div>
