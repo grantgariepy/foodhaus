@@ -33,7 +33,7 @@ export default function Navbar() {
             </Link>
             <Link
               href='#'
-              className='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
+              className='disabled text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
             >
               Ingredients
             </Link>
