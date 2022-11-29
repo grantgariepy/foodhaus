@@ -11,7 +11,7 @@ export default function CategoryItem({
   desc: string;
   index: number;
 }) {
-  console.log(name);
+  // console.log(name);
   return (
     <div key={index}>
       {/* <Link href=>
