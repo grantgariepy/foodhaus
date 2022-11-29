@@ -19,9 +19,9 @@ export default async function Categories() {
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8'>
           {/* product - start */}
 
-          {categories.categories.map((category: any) => (
+          {categories.categories.map((category: any, index: number) => (
             <>
-              <div>
+              <div key={index}>
                 {/* <Link href=>
                 </Link> */}
                 <a

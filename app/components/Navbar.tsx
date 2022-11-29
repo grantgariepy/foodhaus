@@ -76,12 +76,30 @@ export default function Navbar() {
             Menu
           </button>
           <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
-            <button>Close</button>
             <li>
-              <a href='/random'>Random Recipe</a>
+              <Link
+                onClick={handleToggle}
+                href='/'
+              >
+                Home
+              </Link>
             </li>
-            <li>menu item</li>
-            <li>menu item</li>
+            <li>
+              <Link
+                onClick={handleToggle}
+                href='/categories'
+              >
+                Categories
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={handleToggle}
+                href='/random'
+              >
+                Random Recipe
+              </Link>
+            </li>
           </ul>
           {/* <!-- buttons - end --> */}
         </header>
