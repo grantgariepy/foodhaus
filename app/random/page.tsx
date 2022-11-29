@@ -2,7 +2,9 @@
 const mealDBAPI = process.env.MEALDB_API;
 
 const fetchRandomRecipe = async () => {
-  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/random.php`);
+  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/random.php`, {
+    next: { revalidate: 1 },
+  });
   const randomRecipe = await res.json();
   // console.log(randomRecipe);
   return randomRecipe;
