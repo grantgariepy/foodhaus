@@ -8,7 +8,7 @@ export const fetchCategories = async () => {
 
 export default async function Categories() {
   const categories = await fetchCategories();
-  console.log(categories.categories);
+  // console.log(categories.categories);
 
   return (
     <div className='bg-white py-6 sm:py-8 lg:py-12'>
