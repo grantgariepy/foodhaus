@@ -3,7 +3,9 @@ import CategoryItem from './CategoryItem';
 const mealDBAPI = process.env.MEALDB_API;
 
 const fetchCategories = async () => {
-  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/categories.php`);
+  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/categories.php`, {
+    next: { revalidate: 1000 },
+  });
   const categories = await res.json();
   return categories;
 };
