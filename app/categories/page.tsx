@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import CategoryItem from './CategoryItem';
 
 const fetchCategories = async () => {
-  const res = await fetch('http://foodhaus.vercel.app/api/categories');
+  const res = await fetch('https://www.themealdb.com/api/json/v2/9973533/random.php');
   const categories = await res.json();
   return categories;
 };
