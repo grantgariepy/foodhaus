@@ -38,7 +38,7 @@ export default async function recipeCategory({ params: { name } }: PageProps) {
                 {/* <Link href=>
                 </Link> */}
                 <Link
-                  href={`categories/${name}/${meal.idMeal}`}
+                  href={`/recipes/${meal.idMeal}`}
                   className='group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3'
                 >
                   <img

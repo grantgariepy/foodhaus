@@ -3,7 +3,9 @@ import CategoryItem from './CategoryItem';
 const mealDBAPI = process.env.MEALDB_API;
 
 const fetchCategories = async () => {
-  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/categories.php`);
+  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/categories.php`, {
+    next: { revalidate: 1000 },
+  });
   const categories = await res.json();
   return categories;
 };
@@ -22,12 +24,34 @@ export default async function Categories() {
           {/* product - start */}
 
           {categories.categories.map((category: any, index: number) => (
-            <CategoryItem
-              name={category.strCategory}
-              thumb={category.strCategoryThumb}
-              desc={category.strCategoryDescription}
-              index={index}
-            />
+            // <CategoryItem
+            //   name={category.strCategory}
+            //   thumb={category.strCategoryThumb}
+            //   desc={category.strCategoryDescription}
+            //   index={index}
+            // />
+            <div key={index}>
+              {/* <Link href=>
+        </Link> */}
+              <Link
+                href={`categories/${category.strCategory}`}
+                className='group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3'
+              >
+                <img
+                  src={category.strCategoryThumb}
+                  alt='category'
+                  className='w-full h-full object-cover object-center group-hover:scale-110 transition duration-200'
+                  loading='lazy'
+                />
+              </Link>
+              <div>
+                {/* <Link>
+          </Link> */}
+                <div className='flex items-end gap-2'>
+                  <span className='text-gray-800 lg:text-lg font-bold'>{category.strCategory}</span>
+                </div>
+              </div>
+            </div>
           ))}
           {/* product end */}
         </div>
