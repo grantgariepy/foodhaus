@@ -26,7 +26,7 @@ export default function Navbar() {
           {/* <!-- nav - start --> */}
           <nav className='hidden lg:flex gap-12'>
             <Link
-              href='#'
+              href='/categories'
               className='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
             >
               Categories

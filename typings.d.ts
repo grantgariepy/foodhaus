@@ -55,3 +55,12 @@ export type RandomRecipe = {
     dateModified: Date
   }
 }
+
+export type Category = {
+  categories: {
+    idCategory: number;
+    strCategory:string;
+    strCategoryThumb:string;
+    strCategoryDescription:string;
+  }
+}

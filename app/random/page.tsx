@@ -1,7 +1,7 @@
 import { RandomRecipe } from '../../typings';
 
 export const fetchRandomRecipe = async () => {
-  const res = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+  const res = await fetch('https://www.themealdb.com/api/json/v2/9973533/random.php');
   const randomRecipe = await res.json();
   return randomRecipe;
 };
