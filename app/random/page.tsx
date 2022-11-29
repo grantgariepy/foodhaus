@@ -9,11 +9,18 @@ export const fetchRandomRecipe = async () => {
 export default async function Random() {
   const randomRecipe = await fetchRandomRecipe();
 
-  // console.log(randomRecipe.meals[0].strMeal);
   return (
     <>
       <div className='bg-white py-6 sm:py-8 lg:py-12'>
         <div className='max-w-screen-xl px-4 md:px-8 mx-auto'>
+          <div className='text-center pb-3 '>
+            <a
+              href='./random'
+              className='inline-block bg-green-500 hover:bg-green-600 active:bg-green-700 focus-visible:ring ring-green-300 text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-2'
+            >
+              Shuffle&#128256;
+            </a>
+          </div>
           <div className='grid md:grid-cols-2 gap-8 lg:gap-12'>
             <div>
               <div className='h-64 md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg'>

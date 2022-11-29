@@ -20,32 +20,28 @@ export default async function Categories() {
           {/* product - start */}
 
           {categories.categories.map((category: any, index: number) => (
-            <>
-              <div key={index}>
-                {/* <Link href=>
+            <div key={index}>
+              {/* <Link href=>
                 </Link> */}
-                <a
-                  href='#'
-                  className='group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3'
-                >
-                  <img
-                    src={category.strCategoryThumb}
-                    alt='category'
-                    className='w-full h-full object-cover object-center group-hover:scale-110 transition duration-200'
-                    loading='lazy'
-                  />
-                </a>
-                <div>
-                  {/* <Link>
+              <a
+                href='#'
+                className='group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3'
+              >
+                <img
+                  src={category.strCategoryThumb}
+                  alt='category'
+                  className='w-full h-full object-cover object-center group-hover:scale-110 transition duration-200'
+                  loading='lazy'
+                />
+              </a>
+              <div>
+                {/* <Link>
                   </Link> */}
-                  <div className='flex items-end gap-2'>
-                    <span className='text-gray-800 lg:text-lg font-bold'>
-                      {category.strCategory}
-                    </span>
-                  </div>
+                <div className='flex items-end gap-2'>
+                  <span className='text-gray-800 lg:text-lg font-bold'>{category.strCategory}</span>
                 </div>
               </div>
-            </>
+            </div>
           ))}
           {/* product end */}
         </div>

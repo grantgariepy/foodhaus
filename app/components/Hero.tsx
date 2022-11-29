@@ -12,9 +12,8 @@ export default function Hero() {
               Welcome to FoodHaus.
             </h1>
             <p className='lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12'>
-              So many recipes to choose from, you can search or you can filter by catergory,
-              ingredients, or geographical area. Or if you're feeling lucky you can get a random
-              recipe!
+              So many recipes to choose from! You can search by catergory, ingredients, or
+              geographical area! Or if you're feeling lucky you can get a random recipe!
             </p>
             <form className='w-full md:max-w-md flex gap-2'>
               <input
