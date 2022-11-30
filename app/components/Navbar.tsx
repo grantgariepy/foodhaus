@@ -32,16 +32,16 @@ export default function Navbar() {
               Categories
             </Link>
             <Link
-              href='#'
-              className='disabled text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
-            >
-              Ingredients
-            </Link>
-            <Link
-              href='#'
+              href='/area'
               className='text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
             >
               Area
+            </Link>
+            <Link
+              href='#'
+              className='disabled text-gray-600 hover:text-green-500 active:text-green-700 text-lg font-semibold transition duration-100'
+            >
+              Latest
             </Link>
             <Link
               href='/random'
