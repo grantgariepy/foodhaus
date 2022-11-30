@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import CategoryItem from './CategoryItem';
 const mealDBAPI = process.env.MEALDB_API;
 
 const fetchCategories = async () => {
