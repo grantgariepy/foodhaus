@@ -23,9 +23,9 @@ export default async function RandomSelection() {
         {/* text - end */}
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
           {/* product - start */}
-          {randomRecipes.meals.slice(0, 9).map((meal: any, index: number) => (
+          {randomRecipes.meals.slice(0, 8).map((meal: any, index: number) => (
             <div key={index}>
-              <a
+              <Link
                 href={`/recipes/${meal.idMeal}`}
                 className='group h-96 block bg-gray-100 rounded-t-lg overflow-hidden relative'
               >
@@ -35,15 +35,15 @@ export default async function RandomSelection() {
                   alt='food :)'
                   className='w-full h-full object-cover object-center group-hover:scale-110 transition duration-200'
                 />
-              </a>
+              </Link>
               <div className='flex justify-between items-start bg-gray-100 rounded-b-lg gap-2 p-4'>
                 <div className='flex flex-col'>
-                  <a
+                  <Link
                     href={`/recipes/${meal.idMeal}`}
                     className='text-gray-800 hover:text-gray-500 lg:text-lg font-bold transition duration-100'
                   >
                     {meal.strMeal}
-                  </a>
+                  </Link>
                   <span className='text-gray-500 text-sm lg:text-base'>
                     {meal.strArea} - {meal.strCategory}
                   </span>

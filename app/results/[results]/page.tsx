@@ -35,7 +35,7 @@ export default async function Results({ params: { results } }: PageProps) {
           </div>
           {searchResults.meals == null ? (
             <p className='text-gray-800 text-2xl'>
-              No search results found, we recommend searching for main ingredient or by meal name.
+              No search results found, we recommend searching by main ingredient or by meal name.
             </p>
           ) : (
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8'>

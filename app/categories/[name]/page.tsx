@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Category } from '../../../typings';
+import { notFound } from 'next/navigation';
 const mealDBAPI = process.env.MEALDB_API;
 
 export const dynamicParams = true;
@@ -16,9 +17,12 @@ const fetchCategoryRecipes = async (name: string) => {
     `https://www.themealdb.com/api/json/v2/${mealDBAPI}/filter.php?c=${name}`,
     { next: { revalidate: 10000 } }
   );
-
-  const category = await res.json();
-  return category;
+  if (!res.ok) {
+    notFound();
+  } else {
+    const category = await res.json();
+    return category;
+  }
 };
 export default async function recipeCategory({ params: { name } }: PageProps) {
   const category = await fetchCategoryRecipes(name);

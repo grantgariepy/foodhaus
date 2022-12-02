@@ -31,9 +31,9 @@ export default function Hero() {
             >
               <input
                 type='text'
-                id='name'
+                // id='name'
                 // name='q'
-                placeholder='Search by Ingredients'
+                placeholder='Search by Meal Name'
                 className='w-full flex-1 bg-gray-50 text-gray-800 placeholder-gray-500 border focus:ring ring-green-300 rounded outline-none transition duration-100 px-3 py-2'
                 onChange={handleParam(setTerm)}
                 value={term}

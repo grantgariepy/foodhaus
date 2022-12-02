@@ -10,7 +10,7 @@ type PageProps = {
 };
 
 const fetchAreaRecipes = async (area: string) => {
-  console.log(area);
+  // console.log(area);
   const res = await fetch(
     `https://www.themealdb.com/api/json/v2/${mealDBAPI}/filter.php?a=${area}`,
     { next: { revalidate: 10000 } }
@@ -21,7 +21,7 @@ const fetchAreaRecipes = async (area: string) => {
 };
 export default async function locationArea({ params: { area } }: PageProps) {
   const location = await fetchAreaRecipes(area);
-  console.log(location);
+  // console.log(location);
   return (
     <div>
       <div className='bg-white py-6 sm:py-8 lg:py-12'>
