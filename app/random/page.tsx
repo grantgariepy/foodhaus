@@ -1,10 +1,8 @@
-// import { RandomRecipe } from '../../typings';
+import { ImShuffle } from 'react-icons/Im';
 const mealDBAPI = process.env.MEALDB_API;
 
 const fetchRandomRecipe = async () => {
-  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/random.php`, {
-    next: { revalidate: 1 },
-  });
+  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/random.php`);
   const randomRecipe = await res.json();
   // console.log(randomRecipe);
   return randomRecipe;
@@ -20,9 +18,9 @@ export default async function Random() {
           <div className='text-center pb-3 '>
             <a
               href='./random'
-              className='inline-block bg-green-500 hover:bg-green-600 active:bg-green-700 focus-visible:ring ring-green-300 text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-2'
+              className='inline-flex bg-green-500 hover:bg-green-600 active:bg-green-700 focus-visible:ring ring-green-300 text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-2'
             >
-              Shuffle&#128256;
+              Get New Random Recipe
             </a>
           </div>
           <div className='grid md:grid-cols-2 gap-8 lg:gap-12'>

@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 const mealDBAPI = process.env.MEALDB_API;
 
 export const dynamicParams = true;
@@ -12,14 +14,20 @@ type PageProps = {
 const fetchRecipe = async (id: string) => {
   // console.log(id);
   const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/lookup.php?i=${id}`);
-  const recipe = await res.json();
-  // console.log(recipe);
-  return recipe;
+  if (!res.ok) {
+    notFound();
+  } else {
+    const recipe = await res.json();
+    return recipe;
+  }
 };
 
 export default async function RecipePage({ params: { id } }: PageProps) {
   const recipe = await fetchRecipe(id);
-
+  // console.log(recipe[0]);
+  if (recipe.meals == null) {
+    notFound();
+  }
   // console.log(recipe);
 
   return (
