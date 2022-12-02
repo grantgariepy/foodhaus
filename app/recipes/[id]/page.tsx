@@ -13,12 +13,18 @@ type PageProps = {
 
 const fetchRecipe = async (id: string) => {
   // console.log(id);
-  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/lookup.php?i=${id}`);
-  if (!res.ok) {
+  if (!Number(id)) {
     notFound();
   } else {
-    const recipe = await res.json();
-    return recipe;
+    const res = await fetch(
+      `https://www.themealdb.com/api/json/v2/${mealDBAPI}/lookup.php?i=${id}`
+    );
+    if (!res.ok) {
+      notFound();
+    } else {
+      const recipe = await res.json();
+      return recipe;
+    }
   }
 };
 
