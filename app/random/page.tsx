@@ -1,4 +1,5 @@
-import { ImShuffle } from 'react-icons/Im';
+import RefreshButton from './RefreshButton';
+
 const mealDBAPI = process.env.MEALDB_API;
 
 const fetchRandomRecipe = async () => {
@@ -16,12 +17,13 @@ export default async function Random() {
       <div className='bg-white py-6 sm:py-8 lg:py-12'>
         <div className='max-w-screen-xl px-4 md:px-8 mx-auto'>
           <div className='text-center pb-3 '>
-            <a
+            {/* <a
               href='./random'
               className='inline-flex bg-green-500 hover:bg-green-600 active:bg-green-700 focus-visible:ring ring-green-300 text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-2'
             >
               Get New Random Recipe
-            </a>
+            </a> */}
+            <RefreshButton />
           </div>
           <div className='grid md:grid-cols-2 gap-8 lg:gap-12'>
             <div>
