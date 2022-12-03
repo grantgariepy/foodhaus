@@ -9,6 +9,7 @@ export default function Footer() {
               href='https://github.com/grantgariepy'
               target='_blank'
               className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+              aria-label='Github'
             >
               <svg
                 className='w-5 h-5'
@@ -25,6 +26,7 @@ export default function Footer() {
               href='https://grantgariepy.com'
               target='_blank'
               className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+              aria-label='Portfolio'
             >
               <svg
                 className='w-5 h-5'
@@ -41,6 +43,7 @@ export default function Footer() {
               href='https://www.linkedin.com/in/grantgariepy/'
               target='_blank'
               className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+              aria-label='LinkedIn'
             >
               <svg
                 className='w-5 h-5'
