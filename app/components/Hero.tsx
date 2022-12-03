@@ -51,9 +51,10 @@ export default function Hero() {
           <div className='xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg'>
             <Image
               src={food}
-              loading='lazy'
+              loading='eager'
               alt='Photo by Jane Doan https://www.pexels.com/@hellojanedoan/'
               className='w-full h-full object-cover object-center'
+              priority
             />
           </div>
           {/* image - end */}

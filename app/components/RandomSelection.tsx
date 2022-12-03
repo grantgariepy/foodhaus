@@ -2,7 +2,12 @@ import Link from 'next/link';
 const mealDBAPI = process.env.MEALDB_API;
 
 const fetchRandomSelection = async () => {
-  const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/randomselection.php`);
+  const res = await fetch(
+    `https://www.themealdb.com/api/json/v2/${mealDBAPI}/randomselection.php`,
+    {
+      next: { revalidate: 86400 },
+    }
+  );
   const latest = await res.json();
   return latest;
 };
