@@ -1,7 +1,6 @@
 import RefreshButton from './RefreshButton';
 
 const mealDBAPI = process.env.MEALDB_API;
-const secretToken = process.env.MY_SECRET_TOKEN;
 
 const fetchRandomRecipe = async () => {
   const res = await fetch(`https://www.themealdb.com/api/json/v2/${mealDBAPI}/random.php`, {
